@@ -10,7 +10,7 @@ type ServerInfo struct {
 
 func verifyCertFileExist(cert string) {
 	if cert != "" {
-		_, err = os.Stat(cert)
+		_, err := os.Stat(cert)
 		if os.IsNotExist(err) {
 			os.Exit(1)
 		}
